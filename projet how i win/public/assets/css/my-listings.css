@@ -1,0 +1,873 @@
+/* ========================================
+✅ rules.md lu et appliqué
+MY-LISTINGS.CSS - REFONTE COMPLÈTE MAS CABANIDS
+======================================== */
+
+/* ========================================
+VARIABLES CSS MAS CABANIDS POUR MY-LISTINGS
+======================================== */
+
+:root {
+    /* Couleurs Mas Cabanids */
+    --mascabanids-primary: #8B7355;
+    --mascabanids-secondary: #6B8E6B;
+    --mascabanids-accent: #87CEEB;
+    --mascabanids-warm: #C4B5A0;
+    --mascabanids-cream: #FDFCF8;
+    --mascabanids-light: #F5F3F0;
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-backdrop: blur(20px);
+
+    /* Organic shapes */
+    --organic-radius: 2rem 3rem 2rem 2rem;
+    --organic-radius-sm: 1.5rem 2rem 1.5rem 1.5rem;
+    --organic-radius-lg: 2.5rem 4rem 2.5rem 2.5rem;
+
+    /* Shadows */
+    --shadow-organic: 0 20px 40px rgba(139, 115, 85, 0.15), 0 8px 16px rgba(107, 142, 107, 0.1);
+    --shadow-floating: 0 25px 50px rgba(139, 115, 85, 0.18), 0 10px 25px rgba(107, 142, 107, 0.12);
+    --shadow-gentle: 0 8px 20px rgba(139, 115, 85, 0.12);
+
+    /* Animations */
+    --transition-organic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s ease;
+}
+
+/* ========================================
+LAYOUT PRINCIPAL MAS CABANIDS
+======================================== */
+
+.my-listings-page-mascabanids {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            rgba(253, 252, 248, 0.9) 0%,
+            rgba(245, 243, 240, 0.8) 35%,
+            rgba(255, 255, 255, 0.9) 65%,
+            rgba(253, 252, 248, 0.95) 100%);
+    position: relative;
+    overflow-x: hidden;
+    padding: 2rem 0;
+}
+
+.my-listings-page-mascabanids::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 60% 90%, rgba(135, 206, 235, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.my-listings-container-mascabanids {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+HERO SECTION MAS CABANIDS
+======================================== */
+
+.my-listings-hero-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 4rem 3rem;
+    margin-bottom: 4rem;
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background-organic-mascabanids {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 30%, rgba(139, 115, 85, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 60% 70%, rgba(107, 142, 107, 0.08) 0%, transparent 60%);
+    animation: organicPulse 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes organicPulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.8;
+    }
+}
+
+.hero-content-mascabanids {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-mascabanids {
+    margin-bottom: 3rem;
+}
+
+.hero-title-mascabanids {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 50%, var(--mascabanids-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.highlight-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-accent) 0%, var(--mascabanids-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle-mascabanids {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #6B6B6B;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions-mascabanids {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-hero-mascabanids {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--organic-radius-sm);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-hero-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-hero-mascabanids:hover::before {
+    left: 100%;
+}
+
+.btn-primary-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    color: white;
+    box-shadow: var(--shadow-gentle);
+}
+
+.btn-primary-mascabanids:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-floating);
+    background: linear-gradient(135deg, #967E65, #7AA87A);
+}
+
+.btn-secondary-mascabanids {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--mascabanids-primary);
+    border: 2px solid rgba(139, 115, 85, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary-mascabanids:hover {
+    background: rgba(139, 115, 85, 0.1);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gentle);
+}
+
+/* ========================================
+STATISTIQUES MAS CABANIDS
+======================================== */
+
+.statistics-section-mascabanids {
+    margin-bottom: 4rem;
+}
+
+.stats-card-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 3rem;
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-card-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.stats-title-mascabanids {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stats-grid-mascabanids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: var(--organic-radius-sm);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    transition: var(--transition-organic);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.stat-item-mascabanids:hover::before {
+    left: 100%;
+}
+
+.stat-item-mascabanids:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gentle);
+}
+
+.stat-icon-mascabanids {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.stat-total-mascabanids .stat-icon-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+}
+
+.stat-active-mascabanids .stat-icon-mascabanids {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.stat-pending-mascabanids .stat-icon-mascabanids {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.stat-tickets-mascabanids .stat-icon-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-accent) 0%, #3B82F6 100%);
+}
+
+.stat-content-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-number-mascabanids {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--mascabanids-primary);
+    line-height: 1;
+}
+
+.stat-label-mascabanids {
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ========================================
+SECTION DES ANNONCES MAS CABANIDS
+======================================== */
+
+.listings-section-mascabanids {
+    position: relative;
+    z-index: 1;
+}
+
+.listings-header-mascabanids {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.section-title-mascabanids {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.count-text-mascabanids {
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    background: rgba(139, 115, 85, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: var(--organic-radius-sm);
+    font-weight: 600;
+}
+
+/* ========================================
+ÉTAT VIDE MAS CABANIDS
+======================================== */
+
+.empty-state-mascabanids {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+}
+
+.empty-icon-mascabanids {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    box-shadow: var(--shadow-gentle);
+}
+
+.empty-icon-mascabanids i {
+    font-size: 3rem;
+    color: white;
+}
+
+.empty-title-mascabanids {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 1rem 0;
+}
+
+.empty-description-mascabanids {
+    font-size: 1.1rem;
+    color: #6B6B6B;
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.empty-actions-mascabanids {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-action-mascabanids {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--organic-radius-sm);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-action-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-action-mascabanids:hover::before {
+    left: 100%;
+}
+
+/* ========================================
+GRILLE DES ANNONCES MAS CABANIDS
+======================================== */
+
+.listings-grid-mascabanids {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.listing-card-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-organic);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.listing-card-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.listing-card-mascabanids:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-floating);
+    border-color: rgba(139, 115, 85, 0.25);
+}
+
+.listing-header-mascabanids {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.listing-info-mascabanids {
+    flex: 1;
+}
+
+.listing-title-mascabanids {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.listing-meta-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.meta-item-mascabanids {
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-item-mascabanids i {
+    color: var(--mascabanids-secondary);
+    width: 12px;
+}
+
+.listing-status-mascabanids {
+    flex-shrink: 0;
+}
+
+.status-badge-mascabanids {
+    padding: 0.5rem 1rem;
+    border-radius: var(--organic-radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    box-shadow: var(--shadow-gentle);
+}
+
+.status-active-mascabanids {
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: white;
+}
+
+.status-pending-mascabanids {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    color: white;
+}
+
+.status-rejected-mascabanids {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+}
+
+.status-unknown-mascabanids {
+    background: linear-gradient(135deg, #6B7280, #4B5563);
+    color: white;
+}
+
+.listing-content-mascabanids {
+    padding: 0 1.5rem 1rem 1.5rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.listing-preview-mascabanids {
+    display: flex;
+    gap: 1rem;
+}
+
+.listing-image-mascabanids {
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--mascabanids-light) 0%, var(--mascabanids-cream) 100%);
+    border-radius: var(--organic-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.preview-img-mascabanids {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-organic);
+}
+
+.listing-card-mascabanids:hover .preview-img-mascabanids {
+    transform: scale(1.05);
+}
+
+.no-image-mascabanids {
+    font-size: 2rem;
+    color: var(--mascabanids-primary);
+    opacity: 0.3;
+}
+
+.listing-details-mascabanids {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.listing-description-mascabanids {
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+.listing-actions-mascabanids {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(139, 115, 85, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.actions-buttons-mascabanids {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-action-small-mascabanids {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: var(--organic-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-organic);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 50px;
+    min-height: 40px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-action-small-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-action-small-mascabanids:hover::before {
+    left: 100%;
+}
+
+.btn-outline-mascabanids {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--mascabanids-primary);
+    border: 2px solid rgba(139, 115, 85, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+}
+
+.btn-outline-mascabanids:hover {
+    background: rgba(139, 115, 85, 0.15);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
+}
+
+.listing-stats-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.stat-label-mascabanids {
+    color: #6B6B6B;
+    font-weight: 500;
+}
+
+.stat-value-mascabanids {
+    color: var(--mascabanids-primary);
+    font-weight: 700;
+    background: rgba(139, 115, 85, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--organic-radius-sm);
+}
+
+/* ========================================
+RESPONSIVE DESIGN MAS CABANIDS
+======================================== */
+
+@media (max-width: 768px) {
+    .my-listings-container-mascabanids {
+        padding: 0 1rem;
+    }
+
+    .my-listings-hero-mascabanids {
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-title-mascabanids {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero-subtitle-mascabanids {
+        font-size: 1rem;
+    }
+
+    .hero-actions-mascabanids {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-hero-mascabanids {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .stats-card-mascabanids {
+        padding: 2rem;
+    }
+
+    .stats-grid-mascabanids {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .listings-header-mascabanids {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .listings-grid-mascabanids {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .listing-preview-mascabanids {
+        flex-direction: column;
+    }
+
+    .listing-image-mascabanids {
+        width: 100%;
+        height: 150px;
+    }
+
+    .listing-actions-mascabanids {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .actions-buttons-mascabanids {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-listings-page-mascabanids {
+        padding: 1rem 0;
+    }
+
+    .my-listings-hero-mascabanids {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-title-mascabanids {
+        font-size: 1.75rem;
+    }
+
+    .stats-card-mascabanids {
+        padding: 1.5rem;
+    }
+
+    .stat-item-mascabanids {
+        padding: 1rem;
+    }
+
+    .stat-icon-mascabanids {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .stat-number-mascabanids {
+        font-size: 1.5rem;
+    }
+
+    .listing-header-mascabanids {
+        padding: 1rem;
+    }
+
+    .listing-content-mascabanids {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .listing-actions-mascabanids {
+        padding: 1rem;
+    }
+}

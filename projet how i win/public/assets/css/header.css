@@ -1,0 +1,1549 @@
+/**
+ * HEADER.CSS - HOW I WIN MY HOME V1
+ * ========================================
+ *
+ * FICHIER CSS DE L'EN-TÊTE
+ * Styles pour la navigation principale et l'en-tête du site
+ *
+ * AUTEUR : How I Win My Home Team
+ * VERSION : 1.0.0
+ * DATE : 2025-08-17
+ * ========================================
+ */
+
+/* ========================================
+ANCIEN HEADER DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+======================================== */
+
+/*
+
+.main-header {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: var(--backdrop-blur);
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.6s var(--ease-organic);
+}
+
+.main-header.sticky {
+    box-shadow: var(--shadow-soft);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: var(--backdrop-blur-strong);
+    border-bottom-color: rgba(139, 115, 85, 0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+*/
+
+/* ========================================
+LOGO ET BRAND
+======================================== */
+
+/* ANCIEN CSS LOGO DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.header-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: var(--font-size-xl);
+    gap: var(--spacing-sm);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xl);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-title {
+    color: var(--gray-900);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+}
+
+.logo-subtitle {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+*/
+
+/* ========================================
+NAVIGATION PRINCIPALE
+======================================== */
+
+/* ANCIEN CSS NAVIGATION DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+*/
+
+/* ANCIEN CSS NAVIGATION DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0;
+    list-style: none;
+}
+
+.nav-item::before {
+    display: none;
+}
+
+.nav-item::after {
+    display: none;
+}
+*/
+
+/* ANCIEN CSS NAVIGATION DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-gentle);
+    transition: all 0.6s var(--ease-organic);
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: left 0.6s var(--ease-organic);
+    z-index: -1;
+}
+
+.nav-link:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::before {
+    left: 0;
+}
+
+.nav-link.active {
+    color: var(--white);
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-link i {
+    font-size: var(--font-size-sm);
+}
+
+.nav-link span {
+    font-size: var(--font-size-sm);
+}
+*/
+
+/* ========================================
+MENU MOBILE
+======================================== */
+
+/* ANCIEN CSS MOBILE DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: var(--font-size-xl);
+    color: var(--gray-700);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--gray-100);
+    color: var(--primary-color);
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+    z-index: var(--z-dropdown);
+    transform: translateY(-100%);
+    transition: transform var(--transition-normal);
+}
+
+.mobile-menu.open {
+    transform: translateY(0);
+}
+*/
+
+/* ANCIEN CSS NAVIGATION MOBILE DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.mobile-menu .nav-link {
+    display: block;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-100);
+    text-align: center;
+}
+
+.mobile-menu .nav-link:last-child {
+    border-bottom: none;
+}
+*/
+
+/* ========================================
+ACTIONS UTILISATEUR
+======================================== */
+
+/* ANCIEN CSS ACTIONS DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.auth-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.auth-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: none;
+}
+
+.auth-actions .btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.auth-actions .btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.auth-actions .btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.auth-actions .btn-primary:hover {
+    background: var(--primary-dark);
+}
+*/
+
+/* ========================================
+MENU UTILISATEUR MODERNE
+======================================== */
+
+/* ANCIEN CSS MENU UTILISATEUR DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.user-menu {
+    position: relative;
+}
+
+.user-menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-menu-toggle:hover {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.user-menu-toggle:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.user-menu-toggle:hover .user-avatar {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.user-name {
+    font-weight: 600;
+    color: #1e293b;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-menu-toggle .fas.fa-chevron-down {
+    font-size: 0.75rem;
+    color: #64748b;
+    transition: transform 0.3s ease;
+}
+
+.user-menu:hover .fas.fa-chevron-down {
+    transform: rotate(180deg);
+}
+*/
+
+/* ========================================
+DROPDOWN MODERNE
+======================================== */
+
+/* ANCIEN CSS DROPDOWN DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.user-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    min-width: 280px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.user-menu:hover .user-dropdown,
+.user-dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+*/
+
+/* ========================================
+INFORMATIONS UTILISATEUR
+======================================== */
+
+.user-info {
+    padding: 1.25rem 1.5rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px 16px 0 0;
+}
+
+.user-email {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.user-role {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+/* ========================================
+MENU DROPDOWN
+======================================== */
+
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.dropdown-link:hover {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    color: #1d4ed8;
+    transform: translateX(4px);
+}
+
+.dropdown-link i {
+    width: 16px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+    transition: color 0.2s ease;
+}
+
+.dropdown-link:hover i {
+    color: #1d4ed8;
+}
+
+/* ========================================
+SÉPARATEURS
+======================================== */
+
+.dropdown-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);
+    margin: 0.5rem 1rem;
+    border: none;
+}
+
+/* ========================================
+LIEN DE DÉCONNEXION
+======================================== */
+
+.logout-link {
+    color: #dc2626;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 0.5rem;
+}
+
+.logout-link:hover {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    color: #b91c1c;
+}
+
+.logout-link i {
+    color: #dc2626;
+}
+
+.logout-link:hover i {
+    color: #b91c1c;
+}
+
+/* ========================================
+BOUTONS D'ACTION
+======================================== */
+
+.action-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.action-btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.action-btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.action-btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.action-btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.action-btn-ghost {
+    background: transparent;
+    color: var(--gray-600);
+    border: 1px solid transparent;
+}
+
+.action-btn-ghost:hover {
+    background: var(--gray-100);
+    color: var(--gray-900);
+}
+
+/* ========================================
+RECHERCHE
+======================================== */
+
+.search-container {
+    position: relative;
+    margin: 0 var(--spacing-md);
+}
+
+.search-input {
+    padding: var(--spacing-sm) var(--spacing-md);
+    padding-left: 40px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius-md);
+    background: var(--gray-50);
+    color: var(--gray-700);
+    font-size: var(--font-size-sm);
+    width: 300px;
+    transition: all var(--transition-normal);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    font-size: var(--font-size-sm);
+}
+
+/* ========================================
+NOTIFICATIONS
+======================================== */
+
+.notification-bell {
+    position: relative;
+    padding: var(--spacing-sm);
+    color: var(--gray-600);
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.notification-bell:hover {
+    background: var(--gray-100);
+    color: var(--primary-color);
+}
+
+.notification-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--error-color);
+    color: var(--white);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+}
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media (max-width: 1024px) {
+    .search-input {
+        width: 250px;
+    }
+
+    .main-nav {
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .header-actions {
+        gap: var(--spacing-xs);
+    }
+
+    .action-btn {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .header-logo {
+        font-size: var(--font-size-lg);
+    }
+
+    .header-logo img {
+        height: 32px;
+    }
+
+    .user-button {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* ========================================
+ANIMATIONS
+======================================== */
+
+/* ANCIEN CSS HEADER DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.main-header {
+    animation: slideDown 0.3s ease-out;
+}
+*/
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ANCIEN CSS NAVIGATION DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+    transition: left var(--transition-normal);
+}
+
+.nav-link:hover::before {
+    left: 100%;
+}
+*/
+
+/* ========================================
+ÉTATS SPÉCIAUX
+======================================== */
+
+.header-scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+}
+
+.header-transparent {
+    background: transparent;
+    border-bottom: none;
+}
+
+/* ANCIEN CSS NAVIGATION DÉSACTIVÉ POUR ÉVITER LES CONFLITS
+.header-transparent .nav-link {
+    color: var(--white);
+}
+
+.header-transparent .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+*/
+
+.header-transparent .header-logo {
+    color: var(--white);
+}
+
+.header-transparent .header-logo span {
+    color: var(--white);
+}
+
+/* ========================================
+REFONTE COMPLÈTE HEADER MAS CABANIDS
+======================================== */
+
+/* ========================================
+HEADER PRINCIPAL MAS CABANIDS
+======================================== */
+
+.main-header-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 245, 240, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.4s var(--ease-organic);
+    min-height: 100px;
+    width: 100%;
+    display: block;
+}
+
+.main-header-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(107, 142, 107, 0.03) 0%, transparent 50%);
+    animation: organicPulse 15s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main-header-mascabanids.sticky {
+    box-shadow:
+        0 8px 32px rgba(139, 115, 85, 0.15),
+        0 4px 16px rgba(107, 142, 107, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 245, 240, 0.95) 100%);
+    backdrop-filter: blur(25px);
+    border-bottom-color: rgba(139, 115, 85, 0.3);
+}
+
+.header-container-mascabanids {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* ========================================
+LOGO ET BRAND MAS CABANIDS
+======================================== */
+
+.header-brand-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+    margin-right: 0;
+    order: 1;
+}
+
+.logo-link-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s var(--ease-organic);
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 20px 10px 16px 12px;
+}
+
+.logo-link-mascabanids:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+.logo-icon-mascabanids {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 20px 8px 16px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    box-shadow:
+        0 8px 20px rgba(139, 115, 85, 0.3),
+        0 4px 8px rgba(107, 142, 107, 0.2);
+    transition: all 0.4s var(--ease-organic);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-icon-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: lightRotate 3s linear infinite;
+    pointer-events: none;
+}
+
+.logo-link-mascabanids:hover .logo-icon-mascabanids {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow:
+        0 12px 30px rgba(139, 115, 85, 0.4),
+        0 6px 15px rgba(107, 142, 107, 0.3);
+}
+
+.logo-icon-mascabanids i {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo-decoration-mascabanids {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    gap: 2px;
+}
+
+.decoration-dot {
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(135deg, #87CEEB 0%, #6B8E6B 100%);
+    border-radius: 50%;
+    animation: organicPulse 2s ease-in-out infinite;
+}
+
+.decoration-dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.decoration-dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.logo-text-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.logo-title-mascabanids {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(139, 115, 85, 0.1);
+}
+
+.logo-subtitle-mascabanids {
+    font-size: 0.875rem;
+    color: #8B7355;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* ========================================
+NAVIGATION MAS CABANIDS
+======================================== */
+
+.header-nav-mascabanids {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    margin: 0 1rem;
+    order: 2;
+    position: relative;
+    z-index: 10;
+    min-width: 0;
+}
+
+.nav-list-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.nav-item-mascabanids {
+    position: relative;
+}
+
+.nav-link-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    color: #8B7355;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    border-radius: 10px;
+    transition: all 0.3s var(--ease-organic);
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    min-height: 42px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav-link-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.1), transparent);
+    transition: left 0.6s var(--ease-organic);
+}
+
+.nav-link-mascabanids:hover::before {
+    left: 100%;
+}
+
+.nav-link-mascabanids:hover {
+    color: #6B5B47;
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15);
+    border-color: rgba(139, 115, 85, 0.3);
+}
+
+.nav-link-mascabanids.active {
+    color: #6B5B47;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.2);
+    border-color: rgba(139, 115, 85, 0.4);
+}
+
+.nav-icon-mascabanids {
+    font-size: 1.125rem;
+    filter: drop-shadow(0 1px 2px rgba(139, 115, 85, 0.3));
+}
+
+.nav-text-mascabanids {
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.nav-decoration-mascabanids {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    border-radius: 1px;
+    transition: width 0.4s var(--ease-organic);
+}
+
+.nav-link-mascabanids:hover .nav-decoration-mascabanids,
+.nav-link-mascabanids.active .nav-decoration-mascabanids {
+    width: 80%;
+}
+
+/* ========================================
+ACTIONS UTILISATEUR MAS CABANIDS
+======================================== */
+
+.header-actions-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+    margin-left: auto;
+    order: 3;
+}
+
+.auth-actions-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ========================================
+MENU UTILISATEUR MAS CABANIDS
+======================================== */
+
+.user-menu-mascabanids {
+    position: relative;
+}
+
+.user-menu-toggle-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 245, 240, 0.6) 100%);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: 20px 10px 16px 12px;
+    color: #6B5B47;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-organic);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+}
+
+.user-menu-toggle-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.1), transparent);
+    transition: left 0.6s var(--ease-organic);
+}
+
+.user-menu-toggle-mascabanids:hover::before {
+    left: 100%;
+}
+
+.user-menu-toggle-mascabanids:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 10px 25px rgba(139, 115, 85, 0.2),
+        0 5px 12px rgba(107, 142, 107, 0.1);
+    border-color: rgba(139, 115, 85, 0.4);
+}
+
+.user-avatar-mascabanids {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+}
+
+.user-avatar-mascabanids i {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.user-status-indicator-mascabanids {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: organicPulse 2s ease-in-out infinite;
+}
+
+.user-info-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.user-name-mascabanids {
+    font-weight: 700;
+    color: #6B5B47;
+    font-size: 0.875rem;
+}
+
+.user-role-mascabanids {
+    font-size: 0.75rem;
+    color: #8B7355;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.user-arrow-mascabanids {
+    font-size: 0.75rem;
+    color: #8B7355;
+    transition: transform 0.3s var(--ease-organic);
+}
+
+.user-menu-toggle-mascabanids:hover .user-arrow-mascabanids {
+    transform: rotate(180deg);
+}
+
+.user-dropdown-mascabanids {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.75rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 245, 240, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: 20px 8px 16px 12px;
+    box-shadow:
+        0 15px 35px rgba(139, 115, 85, 0.2),
+        0 8px 20px rgba(107, 142, 107, 0.1);
+    min-width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px) scale(0.95);
+    transition: all 0.4s var(--ease-organic);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.user-dropdown-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(107, 142, 107, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.user-menu-mascabanids:hover .user-dropdown-mascabanids {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.user-info-mascabanids {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.user-email-mascabanids {
+    font-size: 0.875rem;
+    color: #8B7355;
+    font-weight: 500;
+}
+
+.user-status-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.status-dot-mascabanids {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    border-radius: 50%;
+    animation: organicPulse 2s ease-in-out infinite;
+}
+
+.status-text-mascabanids {
+    font-size: 0.75rem;
+    color: #6B5B47;
+    font-weight: 500;
+}
+
+.dropdown-menu-mascabanids {
+    list-style: none;
+    margin: 0;
+    padding: 0.75rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown-item-mascabanids {
+    margin: 0;
+}
+
+.dropdown-link-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    color: #6B5B47;
+    text-decoration: none;
+    transition: all 0.4s var(--ease-organic);
+    position: relative;
+    font-weight: 500;
+}
+
+.dropdown-link-mascabanids:hover {
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.1) 0%, rgba(107, 142, 107, 0.05) 100%);
+    color: #8B7355;
+    transform: translateX(8px);
+}
+
+.dropdown-link-mascabanids.logout-link-mascabanids:hover {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+    color: #dc2626;
+}
+
+.dropdown-icon-mascabanids {
+    font-size: 1.125rem;
+    filter: drop-shadow(0 1px 2px rgba(139, 115, 85, 0.3));
+}
+
+.dropdown-text-mascabanids {
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-decoration-mascabanids {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 60%;
+    background: var(--gradient-primary);
+    border-radius: 0 4px 4px 0;
+    transition: width 0.4s var(--ease-organic);
+}
+
+.dropdown-link-mascabanids:hover .dropdown-decoration-mascabanids {
+    width: 4px;
+}
+
+.dropdown-divider-mascabanids {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.2), transparent);
+    margin: 0.75rem 0;
+}
+
+/* ========================================
+BOUTONS AUTH MAS CABANIDS
+======================================== */
+
+.btn-auth-mascabanids {
+    padding: 1rem 2.2rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-organic);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: white;
+    min-height: 50px;
+    white-space: nowrap;
+}
+
+.btn-login-mascabanids {
+    background: var(--gradient-primary);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.2);
+}
+
+.btn-register-mascabanids {
+    background: linear-gradient(135deg, #6B8E6B 0%, #87CEEB 100%);
+    box-shadow: 0 2px 8px rgba(107, 142, 107, 0.2);
+}
+
+.btn-auth-mascabanids:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+}
+
+.btn-register-mascabanids:hover {
+    box-shadow: 0 4px 12px rgba(107, 142, 107, 0.3);
+}
+
+.btn-shine-mascabanids {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s var(--ease-organic);
+}
+
+.btn-auth-mascabanids:hover .btn-shine-mascabanids {
+    left: 100%;
+}
+
+.btn-icon-mascabanids {
+    font-size: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.btn-text-mascabanids {
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+MENU MOBILE MAS CABANIDS
+======================================== */
+
+.mobile-menu-toggle-mascabanids {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 245, 240, 0.6) 100%);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: 16px 8px 12px 10px;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-organic);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-menu-toggle-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.1), transparent);
+    transition: left 0.6s var(--ease-organic);
+}
+
+.mobile-menu-toggle-mascabanids:hover::before {
+    left: 100%;
+}
+
+.mobile-menu-toggle-mascabanids:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(139, 115, 85, 0.2);
+    border-color: rgba(139, 115, 85, 0.4);
+}
+
+.hamburger-container-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-line-mascabanids {
+    width: 25px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    transition: all 0.4s var(--ease-organic);
+}
+
+.mobile-menu-toggle-mascabanids:hover .hamburger-line-mascabanids {
+    background: linear-gradient(90deg, #6B8E6B 0%, #87CEEB 100%);
+}
+
+.menu-indicator-mascabanids {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+
+.menu-dot-mascabanids {
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(135deg, #87CEEB 0%, #6B8E6B 100%);
+    border-radius: 50%;
+    animation: organicPulse 2s ease-in-out infinite;
+}
+
+.menu-dot-mascabanids:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.menu-dot-mascabanids:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* ========================================
+DESKTOP HEADER MAS CABANIDS
+======================================== */
+
+@media (min-width: 769px) {
+    .header-nav-mascabanids {
+        display: flex;
+    }
+
+    .mobile-menu-toggle-mascabanids {
+        display: none;
+    }
+}
+
+/* ========================================
+RESPONSIVE HEADER MAS CABANIDS
+======================================== */
+
+@media (max-width: 768px) {
+    .header-container-mascabanids {
+        padding: 0 1.5rem;
+        height: 70px;
+    }
+
+    .header-nav-mascabanids {
+        display: none;
+    }
+
+    .mobile-menu-toggle-mascabanids {
+        display: flex;
+    }
+
+    .logo-text-mascabanids {
+        display: none;
+    }
+
+    .user-name-mascabanids,
+    .user-role-mascabanids {
+        display: none;
+    }
+
+    .user-info-mascabanids {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .auth-actions-mascabanids {
+        gap: 0.5rem;
+    }
+
+    .btn-auth-mascabanids {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container-mascabanids {
+        padding: 0 1rem;
+        height: 65px;
+    }
+
+    .logo-icon-mascabanids {
+        width: 50px;
+        height: 50px;
+        font-size: 1.75rem;
+    }
+
+    .auth-actions-mascabanids {
+        gap: 0.375rem;
+    }
+
+    .btn-auth-mascabanids {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .user-menu-toggle-mascabanids {
+        padding: 0.5rem;
+    }
+
+    .hamburger-line-mascabanids {
+        width: 20px;
+        height: 2px;
+    }
+}

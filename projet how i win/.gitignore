@@ -1,0 +1,147 @@
+# ========================================
+# GITIGNORE - HOW I WIN MY HOME
+# ========================================
+# Fichiers et dossiers à exclure du versionnement Git
+# pour protéger les données sensibles et améliorer les performances
+
+# ========================================
+# CONFIGURATION SENSIBLE
+# ========================================
+# Ne jamais committer les fichiers de configuration avec credentials
+app/Config/config.php
+.env
+.env.local
+.env.production
+
+# ========================================
+# BASE DE DONNÉES
+# ========================================
+# Exclure les fichiers de base de données locaux (dev uniquement)
+# L'application utilise MySQL, mais exclure les DBs de test locales
+*.sqlite
+*.sqlite3
+*.db
+database.sqlite
+
+# Exclure les fichiers SQL contenant des données utilisateurs/admins sensibles
+# (garder la structure des tables, mais pas les INSERT avec credentials)
+docker-entrypoint-initdb.d/*-data.sql
+docker-entrypoint-initdb.d/*-seeds.sql
+docker-entrypoint-initdb.d/*-users.sql
+docker-entrypoint-initdb.d/howiwinmyhome-data.sql
+
+# ========================================
+# LOGS - CRITIQUE : Contiennent des infos utilisateurs/admin
+# ========================================
+# Exclure tous les logs qui peuvent contenir des informations sensibles
+# (emails, IDs utilisateurs, tentatives de connexion, etc.)
+logs/
+*.log
+*.log.*
+php_errors.log
+error.log
+access.log
+debug.log
+/app/logs/
+/public/logs/
+**/logs/**
+**/*.log
+**/*_log.txt
+
+# ========================================
+# FICHIERS UPLOADÉS
+# ========================================
+# Exclure les fichiers uploadés par les utilisateurs
+public/uploads/*
+!public/uploads/.gitkeep
+uploads/*
+!uploads/.gitkeep
+secure_documents/*
+!secure_documents/.gitkeep
+
+# ========================================
+# FICHIERS TEMPORAIRES
+# ========================================
+# Exclure les fichiers temporaires et cache
+temp/
+tmp/
+cache/
+*.tmp
+*.cache
+
+# ========================================
+# DOSSIERS D'ANALYSE (DÉVELOPPEMENT)
+# ========================================
+# Exclure les rapports d'analyse générés par l'IA
+analysis/
+ai_acknowledgements.md
+
+# ========================================
+# FICHIERS MARKDOWN
+# ========================================
+# Exclure tous les fichiers .md (dossiers de projet et documentation)
+*.md
+
+# ========================================
+# DOCKER
+# ========================================
+# Exclure les données Docker locales et fichiers avec credentials
+docker-compose.yml
+docker-compose.override.yml
+.docker/
+
+# ========================================
+# IDE ET ÉDITEURS
+# ========================================
+# Exclure les fichiers spécifiques aux IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ========================================
+# DÉPENDANCES
+# ========================================
+# Exclure les dépendances installées
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# ========================================
+# SYSTÈME D'EXPLOITATION
+# ========================================
+# Exclure les fichiers système
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# ========================================
+# SAUVEGARDES
+# ========================================
+# Exclure les fichiers de sauvegarde
+*.bak
+*.backup
+*.old
+
+# ========================================
+# FICHIERS DE DÉVELOPPEMENT
+# ========================================
+# Exclure les fichiers de test et développement
+test.php
+debug.php
+phpinfo.php
+
+# ========================================
+# NOTES
+# ========================================
+# Pour ajouter des fichiers spécifiques :
+# !chemin/vers/fichier.ext
+

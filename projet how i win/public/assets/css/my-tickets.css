@@ -1,0 +1,550 @@
+/**
+ * MY-TICKETS.CSS - HOW I WIN MY HOME V2
+ * ========================================
+ *
+ * FICHIER CSS DE LA PAGE MES TICKETS
+ * Styles cohérents avec le design system de l'application
+ *
+ * AUTEUR : How I Win My Home Team
+ * VERSION : 2.0.0
+ * DATE : 2025-01-27
+ * ========================================
+ */
+
+/* ========================================
+VARIABLES CSS
+======================================== */
+
+:root {
+    --tickets-bg: var(--gray-50, #f8fafc);
+    --tickets-card-bg: var(--white, #ffffff);
+    --tickets-border: var(--gray-200, #e2e8f0);
+    --tickets-text: var(--gray-800, #1e293b);
+    --tickets-text-light: var(--gray-500, #64748b);
+    --tickets-primary: var(--primary-color, #3b82f6);
+    --tickets-primary-light: var(--primary-100, #dbeafe);
+    --tickets-success: var(--success-color, #10b981);
+    --tickets-warning: var(--warning-color, #f59e0b);
+    --tickets-error: var(--error-color, #ef4444);
+    --tickets-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --tickets-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --tickets-radius: var(--border-radius-lg, 0.75rem);
+    --tickets-radius-sm: var(--border-radius-md, 0.5rem);
+    --tickets-spacing: var(--spacing-lg, 1.5rem);
+    --tickets-spacing-sm: var(--spacing-md, 1rem);
+    --tickets-spacing-lg: var(--spacing-xl, 2rem);
+}
+
+/* ========================================
+LAYOUT PRINCIPAL
+======================================== */
+
+.my-tickets-page {
+    min-height: 100vh;
+    background: var(--tickets-bg);
+    padding: 0;
+}
+
+.my-tickets-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--tickets-spacing);
+}
+
+/* ========================================
+EN-TÊTE DE LA PAGE
+======================================== */
+
+.my-tickets-header {
+    background: var(--tickets-card-bg);
+    border-radius: var(--tickets-radius);
+    box-shadow: var(--tickets-shadow);
+    padding: var(--tickets-spacing-lg);
+    margin-bottom: var(--tickets-spacing-lg);
+    border: 1px solid var(--tickets-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--tickets-spacing);
+}
+
+.my-tickets-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--tickets-text);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.my-tickets-subtitle {
+    color: var(--tickets-text-light);
+    margin: var(--spacing-sm) 0 0 0;
+    font-size: var(--font-size-lg);
+}
+
+.my-tickets-action {
+    background: var(--tickets-primary);
+    color: var(--white);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--tickets-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all var(--transition-fast);
+    border: none;
+    cursor: pointer;
+}
+
+.my-tickets-action:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: var(--tickets-shadow-lg);
+}
+
+/* ========================================
+ALERTES
+======================================== */
+
+.my-tickets-alert {
+    background: var(--warning-50);
+    border: 1px solid var(--warning-100);
+    color: var(--warning-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--tickets-radius);
+    margin-bottom: var(--tickets-spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.my-tickets-alert h5 {
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.my-tickets-alert p {
+    margin: 0;
+}
+
+/* ========================================
+ONGLETS
+======================================== */
+
+.my-tickets-tabs {
+    background: var(--tickets-card-bg);
+    border-radius: var(--tickets-radius);
+    box-shadow: var(--tickets-shadow);
+    margin-bottom: var(--tickets-spacing-lg);
+    border: 1px solid var(--tickets-border);
+    overflow: hidden;
+}
+
+.my-tickets-tab-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--tickets-border);
+}
+
+.my-tickets-tab-button {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: var(--spacing-lg);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--tickets-text-light);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    position: relative;
+}
+
+.my-tickets-tab-button:hover {
+    background: var(--gray-50);
+    color: var(--tickets-text);
+}
+
+.my-tickets-tab-button.active {
+    background: var(--tickets-primary);
+    color: var(--white);
+}
+
+.my-tickets-tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--white);
+}
+
+.my-tickets-badge {
+    background: var(--gray-200);
+    color: var(--tickets-text);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    min-width: 24px;
+    text-align: center;
+}
+
+.my-tickets-tab-button.active .my-tickets-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
+/* ========================================
+CONTENU DES ONGLETS
+======================================== */
+
+.my-tickets-tab-content {
+    padding: var(--tickets-spacing-lg);
+}
+
+.my-tickets-tab-pane {
+    display: none;
+}
+
+.my-tickets-tab-pane.active {
+    display: block;
+}
+
+.my-tickets-empty-state {
+    text-align: center;
+    padding: var(--spacing-4xl) var(--spacing-lg);
+}
+
+.my-tickets-empty-icon {
+    font-size: 4rem;
+    color: var(--tickets-text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.my-tickets-empty-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--tickets-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.my-tickets-empty-text {
+    color: var(--tickets-text-light);
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-lg);
+}
+
+.my-tickets-empty-action {
+    background: var(--tickets-primary);
+    color: var(--white);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--tickets-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all var(--transition-fast);
+}
+
+.my-tickets-empty-action:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: var(--tickets-shadow-lg);
+}
+
+/* ========================================
+CARTES DE TICKETS
+======================================== */
+
+.my-tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--tickets-spacing);
+}
+
+.my-tickets-card {
+    background: var(--tickets-card-bg);
+    border: 1px solid var(--tickets-border);
+    border-radius: var(--tickets-radius);
+    box-shadow: var(--tickets-shadow);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.my-tickets-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--tickets-shadow-lg);
+}
+
+.my-tickets-card-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--tickets-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-tickets-card-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--tickets-text);
+    margin: 0;
+}
+
+.my-tickets-card-badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.my-tickets-card-badge.active {
+    background: var(--success-100);
+    color: var(--success-color);
+}
+
+.my-tickets-card-badge.pending {
+    background: var(--warning-100);
+    color: var(--warning-color);
+}
+
+.my-tickets-card-body {
+    padding: var(--spacing-lg);
+}
+
+.my-tickets-card-info {
+    margin-bottom: var(--spacing-md);
+}
+
+.my-tickets-card-label {
+    font-weight: 600;
+    color: var(--tickets-text);
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.my-tickets-card-value {
+    color: var(--tickets-text-light);
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    background: var(--gray-50);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+}
+
+.my-tickets-card-price {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--tickets-primary);
+}
+
+.my-tickets-card-actions {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.my-tickets-card-button {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--tickets-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all var(--transition-fast);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.my-tickets-card-button.primary {
+    background: var(--tickets-primary);
+    color: var(--white);
+}
+
+.my-tickets-card-button.primary:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.my-tickets-card-button.secondary {
+    background: var(--gray-100);
+    color: var(--tickets-text);
+}
+
+.my-tickets-card-button.secondary:hover {
+    background: var(--gray-200);
+    color: var(--tickets-text);
+    text-decoration: none;
+}
+
+/* ========================================
+TABLEAU D'HISTORIQUE
+======================================== */
+
+.my-tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--tickets-card-bg);
+    border-radius: var(--tickets-radius);
+    overflow: hidden;
+    box-shadow: var(--tickets-shadow);
+}
+
+.my-tickets-table th,
+.my-tickets-table td {
+    padding: var(--spacing-lg);
+    text-align: left;
+    border-bottom: 1px solid var(--tickets-border);
+}
+
+.my-tickets-table th {
+    background: var(--gray-50);
+    font-weight: 600;
+    color: var(--tickets-text);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.my-tickets-table td {
+    color: var(--tickets-text-light);
+}
+
+.my-tickets-table tr:hover {
+    background: var(--gray-50);
+}
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .my-tickets-container {
+        padding: var(--spacing-md);
+    }
+    
+    .my-tickets-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .my-tickets-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .my-tickets-tab-list {
+        flex-direction: column;
+    }
+    
+    .my-tickets-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .my-tickets-table {
+        font-size: var(--font-size-sm);
+    }
+    
+    .my-tickets-table th,
+    .my-tickets-table td {
+        padding: var(--spacing-md);
+    }
+}
+
+/* ========================================
+BOUTONS D'ACTION ÉTENDUS
+======================================== */
+
+.my-tickets-card-button.warning {
+    background-color: var(--warning-color);
+    color: var(--white);
+    border-color: var(--warning-color);
+}
+
+.my-tickets-card-button.warning:hover {
+    background-color: #d97706;
+    border-color: #d97706;
+    transform: translateY(-1px);
+}
+
+.my-tickets-card-button.success {
+    background-color: var(--success-color);
+    color: var(--white);
+    border-color: var(--success-color);
+}
+
+.my-tickets-card-button.success:hover {
+    background-color: #059669;
+    border-color: #059669;
+    transform: translateY(-1px);
+}
+
+.my-tickets-card-button.info {
+    background-color: var(--info-color);
+    color: var(--white);
+    border-color: var(--info-color);
+}
+
+.my-tickets-card-button.info:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Statut de candidature complète */
+.my-tickets-card-status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    border-radius: var(--border-radius-md);
+    background-color: var(--success-50);
+    color: var(--success-color);
+    border: 1px solid var(--success-100);
+}
+
+.my-tickets-card-status.completed {
+    background-color: var(--success-50);
+    color: var(--success-color);
+    border-color: var(--success-100);
+}
+
+
+@media (max-width: 480px) {
+    .my-tickets-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .my-tickets-empty-icon {
+        font-size: 3rem;
+    }
+    
+    .my-tickets-card-actions {
+        flex-direction: column;
+    }
+}

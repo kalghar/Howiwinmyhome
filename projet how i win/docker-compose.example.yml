@@ -1,0 +1,69 @@
+# ========================================
+# DOCKER COMPOSE - INFRASTRUCTURE HOW I WIN MY HOME
+# ========================================
+#
+# FICHIER EXEMPLE - NE CONTIENT PAS DE CREDENTIALS RÉELS
+#
+# INSTRUCTIONS :
+# 1. Copier ce fichier en docker-compose.yml
+# 2. Remplir les valeurs avec vos propres credentials
+# 3. Ne JAMAIS committer le fichier docker-compose.yml
+#
+# ========================================
+
+services:
+
+  # ========================================
+  # SERVICE WEB - APPLICATION PHP
+  # ========================================
+
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+    depends_on:
+      - db
+
+  # ========================================
+  # SERVICE BASE DE DONNÉES - MYSQL
+  # ========================================
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: your_database_name
+      MYSQL_USER: your_db_user
+      MYSQL_PASSWORD: your_secure_password
+      MYSQL_ROOT_PASSWORD: your_secure_root_password
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+
+  # ========================================
+  # SERVICE PHPMYADMIN - ADMINISTRATION BDD
+  # ========================================
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8082:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: your_secure_root_password
+
+# ========================================
+# VOLUMES PERSISTANTS
+# ========================================
+
+volumes:
+  db_data:
+
+

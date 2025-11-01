@@ -1,0 +1,1706 @@
+/* ========================================
+✅ rules.md lu et appliqué
+LISTINGS.CSS - REFONTE COMPLÈTE MAS CABANIDS
+======================================== */
+
+/* ========================================
+VARIABLES CSS MAS CABANIDS POUR LISTINGS
+======================================== */
+
+:root {
+    /* Couleurs Mas Cabanids */
+    --mascabanids-primary: #8B7355;
+    --mascabanids-secondary: #6B8E6B;
+    --mascabanids-accent: #87CEEB;
+    --mascabanids-warm: #C4B5A0;
+    --mascabanids-cream: #FDFCF8;
+    --mascabanids-light: #F5F3F0;
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.25);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-backdrop: blur(20px);
+
+    /* Organic shapes */
+    --organic-radius: 2rem 3rem 2rem 2rem;
+    --organic-radius-sm: 1.5rem 2rem 1.5rem 1.5rem;
+    --organic-radius-lg: 2.5rem 4rem 2.5rem 2.5rem;
+
+    /* Shadows */
+    --shadow-organic: 0 20px 40px rgba(139, 115, 85, 0.15), 0 8px 16px rgba(107, 142, 107, 0.1);
+    --shadow-floating: 0 25px 50px rgba(139, 115, 85, 0.18), 0 10px 25px rgba(107, 142, 107, 0.12);
+    --shadow-gentle: 0 8px 20px rgba(139, 115, 85, 0.12);
+
+    /* Animations */
+    --transition-organic: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s ease;
+}
+
+/* ========================================
+LAYOUT PRINCIPAL MAS CABANIDS
+======================================== */
+
+.listings-page-mascabanids {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            rgba(253, 252, 248, 0.9) 0%,
+            rgba(245, 243, 240, 0.8) 35%,
+            rgba(255, 255, 255, 0.9) 65%,
+            rgba(253, 252, 248, 0.95) 100%);
+    position: relative;
+    overflow-x: hidden;
+    padding: 2rem 0;
+}
+
+.listings-page-mascabanids::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 60% 90%, rgba(135, 206, 235, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.listings-container-mascabanids {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+HERO SECTION MAS CABANIDS
+======================================== */
+
+.listings-hero-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 4rem 3rem;
+    margin-bottom: 4rem;
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-background-organic-mascabanids {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 30%, rgba(139, 115, 85, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 60% 70%, rgba(107, 142, 107, 0.08) 0%, transparent 60%);
+    animation: organicPulse 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes organicPulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.8;
+    }
+}
+
+.hero-content-mascabanids {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text-mascabanids {
+    margin-bottom: 3rem;
+}
+
+.hero-title-mascabanids {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 50%, var(--mascabanids-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.highlight-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-accent) 0%, var(--mascabanids-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle-mascabanids {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #6B6B6B;
+    margin: 0 0 2rem 0;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-stats-mascabanids {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.stat-badge-mascabanids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: var(--organic-radius-sm);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    transition: var(--transition-organic);
+}
+
+.stat-badge-mascabanids:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gentle);
+}
+
+.stat-number-mascabanids {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--mascabanids-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label-mascabanids {
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-actions-mascabanids {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-hero-mascabanids {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--organic-radius-sm);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-hero-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-hero-mascabanids:hover::before {
+    left: 100%;
+}
+
+.btn-primary-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    color: white;
+    box-shadow: var(--shadow-gentle);
+}
+
+.btn-primary-mascabanids:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-floating);
+    background: linear-gradient(135deg, #967E65, #7AA87A);
+}
+
+.btn-secondary-mascabanids {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--mascabanids-primary);
+    border: 2px solid rgba(139, 115, 85, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary-mascabanids:hover {
+    background: rgba(139, 115, 85, 0.1);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-gentle);
+}
+
+/* ========================================
+FILTRES MAS CABANIDS
+======================================== */
+
+.filters-showcase-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.filters-showcase-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.filters-container-mascabanids {
+    position: relative;
+    z-index: 1;
+}
+
+.filters-form-mascabanids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.filter-group-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-label-mascabanids {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--mascabanids-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-label-mascabanids i {
+    color: var(--mascabanids-secondary);
+}
+
+.filter-input-mascabanids,
+.filter-select-mascabanids {
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(139, 115, 85, 0.2);
+    border-radius: var(--organic-radius-sm);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+    color: var(--mascabanids-primary);
+    transition: var(--transition-organic);
+}
+
+.filter-input-mascabanids:focus,
+.filter-select-mascabanids:focus {
+    outline: none;
+    border-color: var(--mascabanids-primary);
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.filter-actions-mascabanids {
+    display: flex;
+    gap: 1rem;
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.btn-filter-mascabanids {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--organic-radius-sm);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-filter-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-filter-mascabanids:hover::before {
+    left: 100%;
+}
+
+.btn-filter-primary-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    color: white;
+    box-shadow: var(--shadow-gentle);
+}
+
+.btn-filter-primary-mascabanids:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-floating);
+}
+
+.btn-filter-outline-mascabanids {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--mascabanids-primary);
+    border: 2px solid rgba(139, 115, 85, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-filter-outline-mascabanids:hover {
+    background: rgba(139, 115, 85, 0.1);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gentle);
+}
+
+/* ========================================
+CONTENU PRINCIPAL MAS CABANIDS
+======================================== */
+
+.listings-content-mascabanids {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+ÉTAT VIDE MAS CABANIDS
+======================================== */
+
+.empty-state-mascabanids {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+}
+
+.empty-icon-mascabanids {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    box-shadow: var(--shadow-gentle);
+}
+
+.empty-icon-mascabanids i {
+    font-size: 3rem;
+    color: white;
+}
+
+.empty-title-mascabanids {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 1rem 0;
+}
+
+.empty-description-mascabanids {
+    font-size: 1.1rem;
+    color: #6B6B6B;
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.empty-actions-mascabanids {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-action-mascabanids {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--organic-radius-sm);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-action-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-action-mascabanids:hover::before {
+    left: 100%;
+}
+
+/* ========================================
+GRILLE DES ANNONCES MAS CABANIDS
+======================================== */
+
+.listings-grid-mascabanids {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.listing-card-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-organic);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.listing-card-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.listing-card-mascabanids:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-floating);
+    border-color: rgba(139, 115, 85, 0.25);
+}
+
+.listing-image-mascabanids {
+    height: 250px;
+    background: linear-gradient(135deg, var(--mascabanids-light) 0%, var(--mascabanids-cream) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.listing-image-mascabanids img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-organic);
+}
+
+.listing-card-mascabanids:hover .listing-image-mascabanids img {
+    transform: scale(1.05);
+}
+
+.listing-placeholder-mascabanids {
+    font-size: 4rem;
+    color: var(--mascabanids-primary);
+    opacity: 0.3;
+}
+
+.listing-badges-mascabanids {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.badge-mascabanids {
+    padding: 0.5rem 1rem;
+    border-radius: var(--organic-radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    box-shadow: var(--shadow-gentle);
+}
+
+.badge-featured-mascabanids {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+    color: white;
+}
+
+.badge-new-mascabanids {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+}
+
+.badge-status-mascabanids {
+    background: linear-gradient(135deg, var(--mascabanids-primary), var(--mascabanids-secondary));
+    color: white;
+}
+
+.ticket-price-mascabanids {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: var(--organic-radius-sm);
+    text-align: center;
+    box-shadow: var(--shadow-gentle);
+    z-index: 2;
+}
+
+.price-amount-mascabanids {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.price-label-mascabanids {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.listing-content-mascabanids {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.listing-title-mascabanids {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.listing-title-mascabanids a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-organic);
+}
+
+.listing-title-mascabanids a:hover {
+    color: var(--mascabanids-secondary);
+}
+
+.listing-location-mascabanids {
+    color: #6B6B6B;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.listing-features-mascabanids {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.feature-item-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    background: rgba(139, 115, 85, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--organic-radius-sm);
+}
+
+.feature-item-mascabanids i {
+    color: var(--mascabanids-secondary);
+}
+
+.tickets-progress-mascabanids {
+    margin-bottom: 1.5rem;
+}
+
+.progress-header-mascabanids {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.progress-label-mascabanids {
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    font-weight: 600;
+}
+
+.progress-count-mascabanids {
+    font-size: 0.8rem;
+    color: var(--mascabanids-primary);
+    font-weight: 700;
+}
+
+.progress-bar-mascabanids {
+    height: 8px;
+    background: rgba(139, 115, 85, 0.1);
+    border-radius: var(--organic-radius-sm);
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill-mascabanids {
+    height: 100%;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    border-radius: var(--organic-radius-sm);
+    transition: width 0.6s ease;
+    width: 0%;
+}
+
+.progress-info-mascabanids {
+    text-align: center;
+}
+
+.remaining-tickets-mascabanids {
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    font-weight: 500;
+}
+
+.listing-actions-mascabanids {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.btn-action-small-mascabanids {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: var(--organic-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-organic);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 50px;
+    min-height: 40px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-action-small-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-action-small-mascabanids:hover::before {
+    left: 100%;
+}
+
+.btn-outline-mascabanids {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--mascabanids-primary);
+    border: 2px solid rgba(139, 115, 85, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+}
+
+.btn-outline-mascabanids:hover {
+    background: rgba(139, 115, 85, 0.15);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
+}
+
+/* ========================================
+PAGINATION MAS CABANIDS
+======================================== */
+
+.pagination-section-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 2rem;
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    text-align: center;
+}
+
+.pagination-info-mascabanids {
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    margin-bottom: 1.5rem;
+}
+
+.pagination-controls-mascabanids {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pagination-link-mascabanids {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--mascabanids-primary);
+    text-decoration: none;
+    border-radius: var(--organic-radius-sm);
+    border: 2px solid rgba(139, 115, 85, 0.2);
+    font-weight: 600;
+    transition: var(--transition-organic);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 44px;
+    justify-content: center;
+}
+
+.pagination-link-mascabanids:hover {
+    background: rgba(139, 115, 85, 0.1);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gentle);
+}
+
+.pagination-link-mascabanids.active {
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    color: white;
+    border-color: var(--mascabanids-primary);
+}
+
+/* ========================================
+RESPONSIVE DESIGN MAS CABANIDS
+======================================== */
+
+@media (max-width: 768px) {
+    .listings-container-mascabanids {
+        padding: 0 1rem;
+    }
+
+    .listings-hero-mascabanids {
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-title-mascabanids {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle-mascabanids {
+        font-size: 1rem;
+    }
+
+    .hero-stats-mascabanids {
+        gap: 1rem;
+    }
+
+    .hero-actions-mascabanids {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-hero-mascabanids {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .filters-form-mascabanids {
+        grid-template-columns: 1fr;
+    }
+
+    .listings-grid-mascabanids {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .listing-features-mascabanids {
+        justify-content: center;
+    }
+
+    .listing-actions-mascabanids {
+        flex-direction: column;
+    }
+
+    .pagination-controls-mascabanids {
+        gap: 0.25rem;
+    }
+
+    .pagination-link-mascabanids {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .listings-page-mascabanids {
+        padding: 1rem 0;
+    }
+
+    .listings-hero-mascabanids {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-title-mascabanids {
+        font-size: 1.75rem;
+    }
+
+    .stat-badge-mascabanids {
+        padding: 0.75rem 1rem;
+    }
+
+    .stat-number-mascabanids {
+        font-size: 1.5rem;
+    }
+
+    .filters-showcase-mascabanids {
+        padding: 1.5rem;
+    }
+
+    .listing-content-mascabanids {
+        padding: 1rem;
+    }
+}
+
+/* ========================================
+STYLES POUR LISTING DETAIL PAGE (LAYOUT SIMPLE)
+======================================== */
+
+.listing-detail-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            rgba(253, 252, 248, 0.9) 0%,
+            rgba(245, 243, 240, 0.8) 35%,
+            rgba(255, 255, 255, 0.9) 65%,
+            rgba(253, 252, 248, 0.95) 100%);
+    position: relative;
+    overflow-x: hidden;
+    padding: 2rem 0;
+}
+
+.listing-detail-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(139, 115, 85, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 60% 90%, rgba(135, 206, 235, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.listing-detail-page .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.listing-unified-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.announcement-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 2rem;
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.announcement-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb a {
+    color: var(--mascabanids-primary);
+    text-decoration: none;
+    transition: var(--transition-organic);
+}
+
+.breadcrumb a:hover {
+    color: var(--mascabanids-secondary);
+}
+
+.breadcrumb .separator {
+    margin: 0 0.5rem;
+    color: #6B6B6B;
+}
+
+.listing-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 50%, var(--mascabanids-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.listing-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #6B6B6B;
+    background: rgba(139, 115, 85, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: var(--organic-radius-sm);
+}
+
+.meta-item i {
+    color: var(--mascabanids-secondary);
+}
+
+/* Carrousel principal (pleine largeur) */
+.main-carousel-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 2rem;
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+.main-carousel-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.image-carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--organic-radius-sm);
+    z-index: 1;
+}
+
+.carousel-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 100%;
+    pointer-events: none;
+}
+
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(139, 115, 85, 0.3);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-organic);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
+    color: var(--mascabanids-primary);
+    font-size: 1.4rem;
+    position: absolute;
+    pointer-events: all;
+}
+
+.carousel-btn:hover {
+    background: rgba(139, 115, 85, 0.1);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(139, 115, 85, 0.3);
+}
+
+.carousel-btn.prev {
+    left: 2rem;
+}
+
+.carousel-btn.next {
+    right: 2rem;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(139, 115, 85, 0.3);
+    border: 2px solid rgba(139, 115, 85, 0.5);
+    cursor: pointer;
+    transition: var(--transition-organic);
+}
+
+.indicator.active {
+    background: var(--mascabanids-primary);
+    border-color: var(--mascabanids-primary);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(139, 115, 85, 0.5);
+    transform: scale(1.1);
+}
+
+.no-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--mascabanids-primary);
+    opacity: 0.3;
+}
+
+.no-image i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.no-image p {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Section informations (sans cards sur le côté) */
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.property-details,
+.contest-details {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 2rem;
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.property-details::before,
+.contest-details::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.property-details h2,
+.contest-details h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.property-details h2::before,
+.contest-details h2::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    border-radius: 2px;
+}
+
+.details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--organic-radius-sm);
+    border: 1px solid rgba(139, 115, 85, 0.1);
+    transition: var(--transition-organic);
+}
+
+.detail-item:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gentle);
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-content label {
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-content span {
+    font-size: 1rem;
+    color: var(--mascabanids-primary);
+    font-weight: 700;
+}
+
+.contest-info-simple {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--organic-radius-sm);
+    border: 1px solid rgba(139, 115, 85, 0.1);
+    transition: var(--transition-organic);
+}
+
+.info-item:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gentle);
+}
+
+.info-item i {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--mascabanids-secondary) 0%, var(--mascabanids-accent) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.info-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-item strong {
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-item span {
+    font-size: 1rem;
+    color: var(--mascabanids-primary);
+    font-weight: 700;
+}
+
+.ticket-price {
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+}
+
+.description {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    box-shadow: var(--shadow-organic);
+    padding: 2rem;
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.description::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 60% 60%, rgba(107, 142, 107, 0.05) 0%, transparent 60%);
+    animation: organicPulse 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.description h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 1rem 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.description h2::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    border-radius: 2px;
+}
+
+.description p {
+    color: #6B6B6B;
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.actions {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-large {
+    background: linear-gradient(135deg, var(--mascabanids-primary) 0%, var(--mascabanids-secondary) 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--organic-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-organic);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1rem;
+}
+
+.btn-large::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-large:hover::before {
+    left: 100%;
+}
+
+.btn-large:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-floating);
+    background: linear-gradient(135deg, #967E65, #7AA87A);
+}
+
+.info-message {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--organic-radius-sm);
+    color: #DC2626;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.related-listings {
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.related-listings h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.listing-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(253, 252, 248, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: var(--organic-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-organic);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    transition: var(--transition-organic);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.listing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-floating);
+    border-color: rgba(139, 115, 85, 0.25);
+}
+
+.listing-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--mascabanids-light) 0%, var(--mascabanids-cream) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-organic);
+}
+
+.listing-card:hover .listing-image img {
+    transform: scale(1.05);
+}
+
+.listing-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.listing-location {
+    color: #6B6B6B;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.listing-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--mascabanids-primary);
+    margin-bottom: 1rem;
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--mascabanids-primary);
+    border: 2px solid rgba(139, 115, 85, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--organic-radius-sm);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: var(--transition-organic);
+    margin-top: auto;
+}
+
+.btn-outline:hover {
+    background: rgba(139, 115, 85, 0.15);
+    border-color: var(--mascabanids-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
+}
+
+.btn-small {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Responsive pour listing detail */
+@media (max-width: 768px) {
+    .info-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .main-carousel-section {
+        height: 400px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .carousel-btn.prev {
+        left: 0.5rem;
+    }
+
+    .carousel-btn.next {
+        right: 0.5rem;
+    }
+
+    .listings-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

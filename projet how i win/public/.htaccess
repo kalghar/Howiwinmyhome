@@ -1,0 +1,162 @@
+# ========================================
+# CONFIGURATION APACHE - .HTACCESS
+# HOW I WIN MY HOME
+# ========================================
+#
+# Ce fichier configure le serveur Apache pour
+# l'application How I Win My Home.
+#
+# FONCTIONNALITÉS PRINCIPALES :
+# - Réécriture d'URL pour le routage MVC
+# - Sécurité des fichiers sensibles
+# - Optimisation des performances (cache, compression)
+# - Configuration des en-têtes HTTP
+#
+# SECTIONS DE CONFIGURATION :
+# 1. Réécriture d'URL - Routage vers index.php
+# 2. Sécurité - Protection des fichiers sensibles
+# 3. Cache - Expiration des ressources statiques
+# 4. Compression - Réduction de la taille des réponses
+#
+# AUTEUR : How I Win My Home Team
+# VERSION : 2.0.0
+# DATE : 2025-08-12
+# ========================================
+
+# ========================================
+# RÉÉCRITURE D'URL - ROUTAGE MVC
+# ========================================
+#
+# Redirige toutes les requêtes vers index.php
+# pour permettre le routage côté application
+#
+
+# Activation du moteur de réécriture
+RewriteEngine On
+
+# Condition : le fichier demandé n'existe pas
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Condition : le répertoire demandé n'existe pas
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Règle : rediriger vers index.php avec tous les paramètres
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# ========================================
+# SÉCURITÉ DES FICHIERS
+# ========================================
+#
+# Configuration des permissions d'accès
+# aux différents types de fichiers
+#
+
+# ========================================
+# PERMISSIONS POUR LES FICHIERS PHP
+# ========================================
+#
+# Autorise l'accès aux fichiers PHP
+# nécessaires au fonctionnement de l'application
+#
+
+<Files "*.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# ========================================
+# PROTECTION DES FICHIERS SQL
+# ========================================
+#
+# Interdit l'accès aux fichiers SQL
+# pour protéger la base de données
+#
+
+<Files "*.sql">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# ========================================
+# CACHE ET EXPIRATION DES RESSOURCES
+# ========================================
+#
+# Configuration du cache pour améliorer
+# les performances de l'application
+#
+
+# ========================================
+# MODULE EXPIRES - CACHE DES RESSOURCES
+# ========================================
+#
+# Définit la durée de cache pour les
+# ressources statiques (CSS, JS, images)
+#
+
+<IfModule mod_expires.c>
+    # Activation du module d'expiration
+    ExpiresActive On
+    
+    # Cache CSS pendant 1 an
+    ExpiresByType text/css "access plus 1 year"
+    
+    # Cache JavaScript pendant 1 an
+    ExpiresByType application/javascript "access plus 1 year"
+    
+    # Cache des images PNG pendant 1 an
+    ExpiresByType image/png "access plus 1 year"
+    
+    # Cache des images JPG pendant 1 an
+    ExpiresByType image/jpg "access plus 1 year"
+    
+    # Cache des images JPEG pendant 1 an
+    ExpiresByType image/jpeg "access plus 1 year"
+    
+    # Cache des images GIF pendant 1 an
+    ExpiresByType image/gif "access plus 1 year"
+</IfModule>
+
+# ========================================
+# COMPRESSION DES RÉPONSES
+# ========================================
+#
+# Configuration de la compression gzip
+# pour réduire la taille des réponses HTTP
+#
+
+# ========================================
+# MODULE DEFLATE - COMPRESSION GZIP
+# ========================================
+#
+# Applique la compression gzip aux
+# différents types de contenu textuel
+#
+
+<IfModule mod_deflate.c>
+    # Compression du texte brut
+    AddOutputFilterByType DEFLATE text/plain
+    
+    # Compression du HTML
+    AddOutputFilterByType DEFLATE text/html
+    
+    # Compression du XML
+    AddOutputFilterByType DEFLATE text/xml
+    
+    # Compression du CSS
+    AddOutputFilterByType DEFLATE text/css
+    
+    # Compression de l'XML applicatif
+    AddOutputFilterByType DEFLATE application/xml
+    
+    # Compression du XHTML
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    
+    # Compression du RSS
+    AddOutputFilterByType DEFLATE application/rss+xml
+    
+    # Compression du JavaScript
+    AddOutputFilterByType DEFLATE application/javascript
+    
+    # Compression du JavaScript legacy
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>

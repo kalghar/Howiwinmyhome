@@ -1,0 +1,749 @@
+/**
+ * FOOTER.CSS - HOW I WIN MY HOME V1 - MAS CABANIDS DESIGN
+ * ========================================
+ *
+ * FICHIER CSS DU PIED DE PAGE
+ * Design Mas Cabanids avec glassmorphism, formes organiques et animations
+ *
+ * AUTEUR : How I Win My Home Team
+ * VERSION : 2.0.0 - Mas Cabanids
+ * DATE : 2025-01-24
+ * ========================================
+ */
+
+/* ========================================
+FOOTER UTILISE LES VARIABLES GLOBALES
+======================================== */
+
+/* ========================================
+FOOTER PRINCIPAL MAS CABANIDS
+======================================== */
+
+.main-footer-mascabanids {
+    background: var(--gradient-warm);
+    border-top: 1px solid rgba(139, 115, 85, 0.2);
+    padding: 4rem 0 2rem;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.main-footer-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(107, 142, 107, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 115, 85, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(135, 206, 235, 0.05) 0%, transparent 70%);
+    animation: organicPulse 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.footer-container-mascabanids {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+SECTION PRINCIPALE DU FOOTER
+======================================== */
+
+.footer-main-mascabanids {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================
+BRAND ET DESCRIPTION MAS CABANIDS
+======================================== */
+
+.footer-brand-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.brand-card-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 245, 240, 0.8) 100%);
+    backdrop-filter: var(--backdrop-blur);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    border-radius: var(--border-radius-organic);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-organic);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.brand-card-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(107, 142, 107, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(139, 115, 85, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-organic);
+    pointer-events: none;
+}
+
+.brand-card-mascabanids:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-floating);
+    border-color: rgba(139, 115, 85, 0.3);
+}
+
+.brand-card-mascabanids:hover::before {
+    opacity: 1;
+}
+
+.brand-header-mascabanids {
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.logo-icon-mascabanids {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: var(--border-radius-organic);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: var(--shadow-gentle);
+    transition: all 0.4s var(--ease-organic);
+}
+
+.logo-icon-mascabanids i {
+    font-size: 1.5rem;
+    color: var(--white);
+    z-index: 2;
+}
+
+.logo-decoration-mascabanids {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    gap: 2px;
+}
+
+.decoration-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    animation: organicPulse 2s ease-in-out infinite;
+}
+
+.decoration-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.decoration-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.logo-text-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.logo-title-mascabanids {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.logo-subtitle-mascabanids {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.brand-content-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-description-mascabanids {
+    color: var(--gray-600);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+
+/* ========================================
+NAVIGATION FOOTER MAS CABANIDS
+======================================== */
+
+.footer-nav-mascabanids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    height: 100%;
+}
+
+.nav-section-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 245, 240, 0.6) 100%);
+    backdrop-filter: var(--backdrop-blur);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    border-radius: var(--border-radius-soft);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-organic);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-section-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(107, 142, 107, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-organic);
+    pointer-events: none;
+}
+
+.nav-section-mascabanids:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+    border-color: rgba(139, 115, 85, 0.25);
+}
+
+.nav-section-mascabanids:hover::before {
+    opacity: 1;
+}
+
+.nav-title-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-icon-mascabanids {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.footer-nav-list-mascabanids {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-nav-item-mascabanids {
+    position: relative;
+}
+
+.footer-nav-link-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    color: var(--gray-600);
+    text-decoration: none;
+    border-radius: var(--border-radius-soft);
+    transition: all 0.3s var(--ease-organic);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-nav-link-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.1), transparent);
+    transition: left 0.5s var(--ease-organic);
+}
+
+.footer-nav-link-mascabanids:hover {
+    color: var(--primary-color);
+    background: rgba(139, 115, 85, 0.05);
+    transform: translateX(5px);
+}
+
+.footer-nav-link-mascabanids:hover::before {
+    left: 100%;
+}
+
+.footer-nav-text-mascabanids {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.footer-nav-decoration-mascabanids {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s var(--ease-organic);
+}
+
+.footer-nav-link-mascabanids:hover .footer-nav-decoration-mascabanids {
+    width: 100%;
+}
+
+/* ========================================
+RÉSEAUX SOCIAUX MAS CABANIDS
+======================================== */
+
+.footer-social-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.social-card-mascabanids {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(248, 245, 240, 0.6) 100%);
+    backdrop-filter: var(--backdrop-blur);
+    border: 1px solid rgba(139, 115, 85, 0.15);
+    border-radius: var(--border-radius-soft);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-organic);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.social-card-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(135, 206, 235, 0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-organic);
+    pointer-events: none;
+}
+
+.social-card-mascabanids:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+    border-color: rgba(139, 115, 85, 0.25);
+}
+
+.social-card-mascabanids:hover::before {
+    opacity: 1;
+}
+
+.social-title-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.social-icon-mascabanids {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.social-links-mascabanids {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-link-mascabanids {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 245, 240, 0.7) 100%);
+    color: var(--gray-600);
+    border-radius: var(--border-radius-soft);
+    text-decoration: none;
+    transition: all 0.3s var(--ease-organic);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.social-link-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-organic);
+}
+
+.social-link-mascabanids:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: var(--shadow-gentle);
+    border-color: rgba(139, 115, 85, 0.3);
+}
+
+.social-link-mascabanids:hover::before {
+    opacity: 1;
+}
+
+.social-link-mascabanids i {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s var(--ease-organic);
+}
+
+.social-link-mascabanids:hover i {
+    color: var(--white);
+}
+
+.social-decoration-mascabanids {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s var(--ease-organic);
+}
+
+.social-link-mascabanids:hover .social-decoration-mascabanids {
+    width: 100px;
+    height: 100px;
+}
+
+/* ========================================
+SECTION INFÉRIEURE MAS CABANIDS
+======================================== */
+
+.footer-bottom-mascabanids {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(139, 115, 85, 0.2);
+    position: relative;
+}
+
+.footer-bottom-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.3), transparent);
+}
+
+.legal-info-mascabanids {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.copyright-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.copyright-mascabanids i {
+    color: var(--secondary-color);
+}
+
+.legal-links-mascabanids {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.legal-link-mascabanids {
+    color: var(--gray-600);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s var(--ease-organic);
+    position: relative;
+}
+
+.legal-link-mascabanids:hover {
+    color: var(--primary-color);
+}
+
+.legal-link-mascabanids::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gradient-primary);
+    transition: width 0.3s var(--ease-organic);
+}
+
+.legal-link-mascabanids:hover::after {
+    width: 100%;
+}
+
+.separator-mascabanids {
+    color: var(--gray-600);
+    font-size: 0.8rem;
+}
+
+/* ========================================
+BOUTON RETOUR EN HAUT MAS CABANIDS
+======================================== */
+
+.back-to-top-mascabanids {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border: 1px solid rgba(139, 115, 85, 0.3);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-organic);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: var(--shadow-floating);
+    position: relative;
+    overflow: hidden;
+}
+
+.back-to-top-mascabanids::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-organic);
+}
+
+.back-to-top-mascabanids:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 16px 50px rgba(139, 115, 85, 0.3);
+    border-color: rgba(139, 115, 85, 0.5);
+}
+
+.back-to-top-mascabanids:hover::before {
+    opacity: 1;
+}
+
+.back-to-top-mascabanids i {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s var(--ease-organic);
+}
+
+.back-to-top-mascabanids:hover i {
+    transform: translateY(-2px);
+}
+
+.btn-decoration-mascabanids {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s var(--ease-organic);
+}
+
+.back-to-top-mascabanids:hover .btn-decoration-mascabanids {
+    width: 80px;
+    height: 80px;
+}
+
+/* ========================================
+ANIMATIONS ORGANIQUES
+======================================== */
+
+@keyframes organicPulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.1) rotate(180deg);
+        opacity: 0.8;
+    }
+}
+
+/* ========================================
+RESPONSIVE MAS CABANIDS
+======================================== */
+
+@media (max-width: 768px) {
+    .footer-main-mascabanids {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-container-mascabanids {
+        padding: 0 1.5rem;
+    }
+
+
+    .social-links-mascabanids {
+        justify-content: center;
+    }
+
+    .legal-links-mascabanids {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .separator-mascabanids {
+        display: none;
+    }
+
+    .back-to-top-mascabanids {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer-mascabanids {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-container-mascabanids {
+        padding: 0 1rem;
+    }
+
+    .brand-card-mascabanids,
+    .nav-section-mascabanids,
+    .social-card-mascabanids {
+        padding: 1.5rem;
+    }
+
+    .footer-main-mascabanids {
+        gap: 1.5rem;
+    }
+
+    .logo-title-mascabanids {
+        font-size: 1.3rem;
+    }
+
+    .nav-title-mascabanids,
+    .social-title-mascabanids {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+OPTIMISATIONS DE PERFORMANCE
+======================================== */
+
+.main-footer-mascabanids,
+.brand-card-mascabanids,
+.nav-section-mascabanids,
+.social-card-mascabanids,
+.social-link-mascabanids,
+.back-to-top-mascabanids {
+    will-change: transform;
+}
+
+/* Réduction des animations sur mobile */
+@media (prefers-reduced-motion: reduce) {
+
+    .main-footer-mascabanids::before,
+    .decoration-dot,
+    .brand-card-mascabanids,
+    .nav-section-mascabanids,
+    .social-card-mascabanids,
+    .social-link-mascabanids,
+    .back-to-top-mascabanids {
+        animation: none;
+        transition: none;
+    }
+}
